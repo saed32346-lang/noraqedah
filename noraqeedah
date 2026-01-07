@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>دورة شرح عقيدة أهل السنة والجماعة - كامل</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#1f4b99;
+      --accent:#f59e0b;
+      --muted:#6b7280;
+      --bg:#f5f7fb;
+      --card:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Cairo',sans-serif;
+      background:var(--bg);
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    header{
+      background:linear-gradient(90deg,var(--primary),#163a75);
+      color:#fff;
+      padding:22px 16px;
+      text-align:center;
+    }
+    header h1{margin:0;font-size:1.5rem}
+    header p{margin:6px 0 0;color:rgba(255,255,255,0.9)}
+
+    main{max-width:1100px;margin:20px auto;padding:12px}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:16px}
+    @media (max-width:980px){.grid{grid-template-columns:1fr}}
+
+    .card{background:var(--card);border-radius:10px;padding:14px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .card h2{margin:0 0 10px;color:var(--primary)}
+    .lead{color:var(--muted);margin-bottom:10px}
+
+    /* دروس */
+    .lesson{border:1px solid #eef2ff;border-radius:8px;padding:12px;margin-bottom:10px;background:linear-gradient(180deg,#fff,#fbfdff)}
+    .lesson h3{margin:0 0 6px;font-size:1.05rem}
+    .lesson p{margin:0 0 8px;color:#374151}
+
+    .btn{display:inline-block;padding:8px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:0.9rem;cursor:pointer}
+    .btn-primary{background:var(--primary);color:#fff;border:none}
+    .btn-ghost{background:transparent;color:var(--primary);border:2px solid rgba(31,75,153,0.08)}
+
+    /* الشهادة */
+    .cert-controls{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;margin-bottom:12px}
+    .input{padding:8px 10px;border-radius:8px;border:1px solid #e5e7eb;background:#fff;font-size:0.95rem}
+    .certificate-wrap{background:linear-gradient(180deg,#fffdf6,#ffffff);padding:22px;border-radius:14px;border:6px solid rgba(31,75,153,0.06);margin-top:8px}
+    .cert-title{color:var(--primary);font-weight:700;font-size:1.4rem;text-align:center}
+    .cert-name{display:block;text-align:center;font-size:1.4rem;font-weight:700;color:var(--primary);padding:10px 14px;border-radius:10px;border:2px dashed rgba(31,75,153,0.12);background:#fff;margin:12px auto;min-width:260px}
+    .cert-meta{display:flex;gap:12px;justify-content:center;margin-top:12px;flex-wrap:wrap}
+    .meta-box{background:linear-gradient(180deg,rgba(31,75,153,0.03),rgba(245,158,11,0.02));padding:10px 14px;border-radius:10px;text-align:center;min-width:140px}
+    .meta-box .label{color:var(--muted);font-size:0.85rem}
+    .meta-box .value{font-weight:700;color:var(--primary);margin-top:6px}
+
+    /* أسئلة */
+    .questions ul{padding-right:18px;margin:0}
+    .questions li{margin-bottom:8px;color:#374151}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:0.9rem;padding-bottom:30px}
+
+    /* طباعة الشهادة */
+    @media print{
+      body{background:#fff}
+      .no-print{display:none}
+      .certificate-wrap{border:none;border-radius:0;padding:18mm}
+    }
+
+    /* شريط جانبي */
+    .sidebar .card{position:sticky;top:18px}
+    .progress{height:10px;background:#eef2ff;border-radius:999px;overflow:hidden;margin-top:8px}
+    .progress > span{display:block;height:100%;background:linear-gradient(90deg,var(--primary),#2b6cb0);width:0%}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>دورة شرح عقيدة أهل السنة والجماعة</h1>
+  <p>شرح الشيخ محمد بن صالح العثيمين رحمه الله — 16 درسًا</p>
+</header>
+
+<main>
+  <div class="grid">
+
+    <!-- العمود الرئيسي -->
+    <div>
+      <section class="card">
+        <h2>عن الدورة</h2>
+        <p class="lead">هذه الصفحة تحتوي الدورة كاملة: دروس، روابط مشاهدة، مذكرات مؤقتة، أسئلة مراجعة، وشهادة إتمام قابلة للتعبئة والطباعة.</p>
+        <a class="btn btn-primary" href="https://youtube.com/playlist?list=PLXS0usquloW-8tdwpZRydcqnj7_c4NW-f&si=apRVl9EtCgLVqEGs" target="_blank" rel="noopener">مشاهدة قائمة التشغيل</a>
+      </section>
+
+      <section class="card" style="margin-top:14px">
+        <h2>دروس الدورة</h2>
+
+        <!-- تكرار الدروس 16 -->
+        <!-- كل درس يستخدم رابط الـ Playlist كما طلبت -->
+        <div id="lessonsContainer">
+          <!-- الدروس ستُدرج هنا بواسطة JS أو يمكنك تعديلها يدوياً -->
+        </div>
+
+      </section>
+
+      <section class="card questions" style="margin-top:14px">
+        <h2>أسئلة نهاية الدورة</h2>
+        <p class="lead">استخدم هذه الأسئلة للمراجعة بعد إتمام جميع الدروس.</p>
+        <ul>
+          <li>ما تعريف العقيدة في اللغة والاصطلاح؟ ولماذا تعد أساس الدين؟</li>
+          <li>اذكر أنواع التوحيد الثلاثة مع شرح مختصر لكل نوع.</li>
+          <li>ما منهج أهل السنة والجماعة في باب الأسماء والصفات؟</li>
+          <li>ما أثر الإيمان بالملائكة في حياة المسلم؟</li>
+          <li>ما معنى الإيمان باليوم الآخر؟ وما أهم مراحله؟</li>
+          <li>اذكر مراتب القدر الأربع مع مثال لكل مرتبة.</li>
+          <li>ما موقف أهل السنة من الصحابة رضي الله عنهم؟</li>
+          <li>ما تعريف الإيمان عند أهل السنة؟ وهل يزيد وينقص؟</li>
+          <li>ما معنى الولاء والبراء؟ وكيف يضبط بضوابط الشرع؟</li>
+          <li>اذكر ثلاث فوائد عملية خرجت بها من هذه الدورة.</li>
+        </ul>
+      </section>
+
+      <!-- دمج الشهادة داخل نفس الملف -->
+      <section class="card" style="margin-top:14px">
+        <h2>شهادة إتمام الدورة</h2>
+        <p class="lead">املأ اسم الطالب واضغط توليد ثم استخدم زر الطباعة لحفظ الشهادة كـ PDF.</p>
+
+        <div class="no-print cert-controls">
+          <input id="studentName" class="input" type="text" placeholder="اكتب اسم الطالب هنا" />
+          <input id="courseName" class="input" type="text" value="شرح عقيدة أهل السنة والجماعة – لابن عثيمين" />
+          <input id="dateField" class="input" type="text" placeholder="التاريخ مثال 01/01/2026" />
+          <button id="generateBtn" class="btn">توليد الشهادة</button>
+          <button id="printBtn" class="btn" style="background:#fff;color:var(--primary);border:2px solid rgba(31,75,153,0.12)">طباعة أو حفظ PDF</button>
+        </div>
+
+        <div id="certificate" class="certificate-wrap" role="document" aria-label="شهادة إتمام">
+          <div style="text-align:center">
+            <div class="cert-title">شهادة إتمام</div>
+            <div style="color:var(--muted);margin-top:6px">تُمنح هذه الشهادة تقديراً لإتمام الدورة بنجاح</div>
+          </div>
+
+          <div style="margin-top:14px;text-align:center">
+            <div class="cert-name" id="certName">اسم الطالب / الطالبة</div>
+            <div style="margin-top:8px;font-weight:700;color:#374151" id="certCourse">شرح عقيدة أهل السنة والجماعة – لابن عثيمين</div>
+            <div style="color:var(--muted);margin-top:8px">قد أتم/أتمّت بنجاح جميع دروس الدورة وعددها 16 درساً، وأجاب/أجابت عن أسئلة المراجعة النهائية.</div>
+          </div>
+
+          <div class="cert-meta" role="list">
+            <div class="meta-box" role="listitem"><div class="label">مدة الدورة</div><div class="value">16 درس</div></div>
+            <div class="meta-box" role="listitem"><div class="label">المستوى</div><div class="value">مبتدئ إلى متوسط</div></div>
+            <div class="meta-box" role="listitem"><div class="label">الجهة المانحة</div><div class="value">منصة نور العلم</div></div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:18px;flex-wrap:wrap">
+            <div style="min-width:160px;text-align:left">
+              <img src="https://via.placeholder.com/140x40?text=نور+العلم" alt="شعار" style="max-width:140px">
+            </div>
+            <div style="text-align:center;min-width:220px">
+              <div style="height:2px;background:linear-gradient(90deg,rgba(31,75,153,0.2),rgba(31,75,153,0.6));margin:6px auto 8px;width:220px;border-radius:2px"></div>
+              <div style="font-weight:700;color:#374151">الأستاذ/ة momtas</div>
+              <div style="color:var(--muted);font-size:0.9rem">مدير المنصة</div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- الشريط الجانبي -->
+    <aside class="sidebar">
+      <div class="card">
+        <h2>محتويات سريعة</h2>
+        <p class="lead">روابط سريعة للدروس والمذكرة</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="https://youtube.com/playlist?list=PLXS0usquloW-8tdwpZRydcqnj7_c4NW-f&si=apRVl9EtCgLVqEGs" target="_blank" rel="noopener">قائمة التشغيل</a>
+          <a class="btn btn-ghost" href="https://youtube.com/playlist?list=PLXS0usquloW-8tdwpZRydcqnj7_c4NW-f&si=apRVl9EtCgLVqEGs" target="_blank" rel="noopener">مذكرة الدورة</a>
+        </div>
+
+        <div style="margin-top:12px">
+          <div style="color:var(--muted);font-size:0.95rem">تقدّم الدورة</div>
+          <div class="progress" aria-hidden="true"><span id="progressBar" style="width:0%"></span></div>
+          <div style="margin-top:8px;color:var(--muted);font-size:0.9rem" id="progressText">0 من 16 درس</div>
+        </div>
+
+        <div style="margin-top:12px">
+          <h3 style="margin:0 0 8px;color:var(--primary)">قائمة الدروس</h3>
+          <ol id="lessonList" style="padding-right:18px;margin:0;color:#374151"></ol>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer>
+  تم إعداد الصفحة بواسطة momtas – يمكنك رفع هذا الملف إلى GitHub Pages لعرض الدورة مباشرة.
+</footer>
+
+<script>
+  // إعداد بيانات الدروس
+  const playlistLink = "https://youtube.com/playlist?list=PLXS0usquloW-8tdwpZRydcqnj7_c4NW-f&si=apRVl9EtCgLVqEGs";
+  const lessons = [
+    {title:"الدرس 1: مقدمة في العقيدة وأهميتها", desc:"تعريف العقيدة وأهميتها كقاعدة للدين."},
+    {title:"الدرس 2: الإيمان بالله – توحيد الربوبية", desc:"بيان أن الله وحده الخالق والرازق والمدبر."},
+    {title:"الدرس 3: الإيمان بالله – توحيد الألوهية", desc:"إفراد الله بالعبادة ومعنى لا إله إلا الله."},
+    {title:"الدرس 4: الأسماء والصفات", desc:"منهج أهل السنة في إثبات الأسماء والصفات."},
+    {title:"الدرس 5: الإيمان بالملائكة", desc:"تعريف الملائكة وصفاتهم وأعمالهم."},
+    {title:"الدرس 6: الإيمان بالكتب", desc:"الإيمان بالكتب المنزلّة وموقف أهل السنة من التحريف."},
+    {title:"الدرس 7: الإيمان بالرسل", desc:"مكانة الرسل وخصائصهم والرد على الغلو."},
+    {title:"الدرس 8: القبر وما بعده", desc:"أول منازل الآخرة ونعيم القبر وعذابه."},
+    {title:"الدرس 9: البعث والحساب", desc:"البعث والميزان والصراط والحساب."},
+    {title:"الدرس 10: الجنة والنار", desc:"صفات الجنة والنار وأثرها في العمل."},
+    {title:"الدرس 11: مراتب القدر الأربع", desc:"العلم والكتابة والمشيئة والخلق."},
+    {title:"الدرس 12: الرد على القدرية والجبرية", desc:"وسطية أهل السنة بين الجبر والاختيار."},
+    {title:"الدرس 13: منهج أهل السنة في الجماعة", desc:"معنى الجماعة والسمع والطاعة وضوابطها."},
+    {title:"الدرس 14: منهج أهل السنة في الصحابة", desc:"فضل الصحابة وموقف أهل السنة من الخلاف."},
+    {title:"الدرس 15: الإيمان قول وعمل", desc:"تعريف الإيمان وزيادته ونقصانه."},
+    {title:"الدرس 16: الولاء والبراء وخاتمة", desc:"ضوابط الولاء والبراء وخلاصة الدورة."}
+  ];
+
+  // إدراج الدروس في الصفحة
+  const lessonsContainer = document.getElementById('lessonsContainer');
+  const lessonList = document.getElementById('lessonList');
+  lessons.forEach((ls, idx) => {
+    const div = document.createElement('div');
+    div.className = 'lesson';
+    div.innerHTML = `
+      <h3>${ls.title}</h3>
+      <p>${ls.desc}</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="${playlistLink}" target="_blank" rel="noopener">مشاهدة الدرس</a>
+        <a class="btn btn-ghost" href="${playlistLink}" target="_blank" rel="noopener">مذكرة الدرس (PDF)</a>
+      </div>
+    `;
+    lessonsContainer.appendChild(div);
+
+    const li = document.createElement('li');
+    li.textContent = ls.title;
+    lessonList.appendChild(li);
+  });
+
+  // تقدم افتراضي وحفظ محلي
+  const progressBar = document.getElementById('progressBar');
+  const progressText = document.getElementById('progressText');
+  const total = lessons.length;
+  // استرجاع التقدم من التخزين المحلي
+  const completed = JSON.parse(localStorage.getItem('completedLessons') || '[]');
+  function updateProgress(){
+    const done = completed.length;
+    const pct = Math.round((done/total)*100);
+    progressBar.style.width = pct + '%';
+    progressText.textContent = `${done} من ${total} درس`;
+  }
+  updateProgress();
+
+  // توليد الشهادة وطباعة
+  const nameInput = document.getElementById('studentName');
+  const courseInput = document.getElementById('courseName');
+  const dateInput = document.getElementById('dateField');
+  const generateBtn = document.getElementById('generateBtn');
+  const printBtn = document.getElementById('printBtn');
+  const certName = document.getElementById('certName');
+  const certCourse = document.getElementById('certCourse');
+
+  generateBtn.addEventListener('click', () => {
+    const name = nameInput.value.trim() || 'اسم الطالب / الطالبة';
+    const course = courseInput.value.trim() || 'شرح عقيدة أهل السنة والجماعة – لابن عثيمين';
+    const date = dateInput.value.trim() || new Date().toLocaleDateString('ar-SA');
+    certName.textContent = name;
+    certCourse.textContent = course;
+    // إضافة التاريخ إن لم يكن موجوداً
+    let existingDate = document.getElementById('certDate');
+    if (!existingDate) {
+      const d = document.createElement('div');
+      d.id = 'certDate';
+      d.style.textAlign = 'center';
+      d.style.marginTop = '10px';
+      d.style.color = '#374151';
+      d.style.fontSize = '0.95rem';
+      d.textContent = 'التاريخ: ' + date;
+      document.getElementById('certificate').insertBefore(d, document.querySelector('.cert-meta').nextSibling);
+    } else {
+      existingDate.textContent = 'التاريخ: ' + date;
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  printBtn.addEventListener('click', () => window.print());
+
+  // حفظ تقدم تجريبي: عند النقر على عنوان الدرس في الشريط الجانبي يتم وسمه كمكتمل
+  lessonList.addEventListener('click', (e) => {
+    if (e.target.tagName.toLowerCase() === 'li') {
+      const idx = Array.from(lessonList.children).indexOf(e.target);
+      const id = `lesson-${idx}`;
+      const pos = completed.indexOf(id);
+      if (pos === -1) completed.push(id);
+      else completed.splice(pos,1);
+      localStorage.setItem('completedLessons', JSON.stringify(completed));
+      // تمييز العناصر المكتملة بصريًا
+      Array.from(lessonList.children).forEach((li, i) => {
+        const key = `lesson-${i}`;
+        li.style.opacity = completed.includes(key) ? '0.6' : '1';
+        li.style.textDecoration = completed.includes(key) ? 'line-through' : 'none';
+      });
+      updateProgress();
+    }
+  });
+
+  // تهيئة حالة الشريط الجانبي من التخزين
+  Array.from(lessonList.children).forEach((li, i) => {
+    const key = `lesson-${i}`;
+    if (completed.includes(key)) {
+      li.style.opacity = '0.6';
+      li.style.textDecoration = 'line-through';
+    }
+  });
+
+</script>
+
+</body>
+</html>
